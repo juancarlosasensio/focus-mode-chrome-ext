@@ -3,7 +3,9 @@ main > :not(:last-child),
 main > :last-child > navigation-tree,
 main .toc-container,
 ytd-watch-flexy[cinematics-enabled] #secondary.ytd-watch-flexy,
-#content > ytd-rich-shelf-renderer[is-shorts] {
+#content > ytd-rich-shelf-renderer[is-shorts],
+ytd-player.style-scope.ytd-shorts
+ {
   display: none;
 }
 
