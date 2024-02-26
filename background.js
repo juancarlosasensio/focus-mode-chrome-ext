@@ -31,12 +31,14 @@ chrome.action.onClicked.addListener(async (tab) => {
         files: ["focus-mode.css"],
         target: { tabId: tab.id },
       });
+      console.log('Injected CSS successully')
     } else if (nextState === "OFF") {
       // Remove the CSS file when the user turns the extension off
       await chrome.scripting.removeCSS({
         files: ["focus-mode.css"],
         target: { tabId: tab.id },
       });
+      console.log('Removed CSS successully')
     }
   } else {
     chrome.scripting.executeScript(
